@@ -1,3 +1,4 @@
+import AppPromotion from "@/components/AppPromotion";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/Services";
 import StepsSection from "@/components/Steps";
@@ -12,6 +13,7 @@ export default function Home() {
       {/* <WhyChooseUs /> */}
       <StepsSection />
       <TopStores />
+      <AppPromotion />
     </div>
   );
 }

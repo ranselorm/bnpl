@@ -55,7 +55,7 @@ const TopStores: React.FC = () => {
             {stores.map((store, index) => (
               <CarouselItem
                 key={index}
-                className="basis-2/3 md:basis-1/2 flex-shrink-0"
+                className="basis-full md:basis-1/2 flex-shrink-0"
               >
                 <Card className="h-[300px] overflow-hidden relative group">
                   {/* Image with overlay */}
