@@ -20,12 +20,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/">
-            <img
-              src="/images/logo.webp"
-              alt="Motito Logo"
-              width={120}
-              height={40}
-            />{" "}
+            <img src="/images/logo.webp" alt="logo" width={120} height={40} />
           </Link>
 
           {/* Menu Toggle (Mobile) */}
