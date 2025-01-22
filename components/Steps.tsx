@@ -65,6 +65,7 @@ const StepsSection = () => {
           </div>
 
           {/* Right Image */}
+
           <div className="">
             <div className="bg-white rounded-xl p-6 shadow-lg h-[600px]">
               <img
