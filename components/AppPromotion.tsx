@@ -8,10 +8,13 @@ const AppPromotion: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         {/* Text Content */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 mb-4">
+          <h2
+            className="text-4xl md:text-6xl font-bold text-dark mb-4"
+            style={{ lineHeight: 1.2 }}
+          >
             Easy-peasy financing at your fingertips.
           </h2>
-          <p className="text-lg text-gray-700 mb-6">Get the app today.</p>
+          <p className="text-dark mb-6 text-2xl">Get the app today.</p>
           <div className="flex space-x-4">
             <a
               href="#"
@@ -19,9 +22,9 @@ const AppPromotion: React.FC = () => {
               aria-label="Download on the App Store"
             >
               <img
-                src="/images/app-store.png"
+                src="/icons/appstore.png"
                 alt="Download on the App Store"
-                className="h-12"
+                className="h-12 w-6xl"
               />
             </a>
             <a
@@ -30,7 +33,7 @@ const AppPromotion: React.FC = () => {
               aria-label="Get it on Google Play"
             >
               <img
-                src="/images/google-play.png"
+                src="/icons/google.png"
                 alt="Get it on Google Play"
                 className="h-12"
               />
