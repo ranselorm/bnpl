@@ -9,3 +9,9 @@ body {
   box-sizing: border-box;
   font-family: Montserrat, Helvetica, sans-serif;
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
