@@ -1,7 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-const SingleRowBrands = () => {
+const BrandSlider = () => {
   const brands = [
     { src: "/images/b1.png", alt: "microsoft" },
     { src: "/images/b2.png", alt: "Asus" },
@@ -9,9 +9,9 @@ const SingleRowBrands = () => {
     { src: "/images/b6.png", alt: "sony" },
     { src: "/images/b4.png", alt: "apple" },
     { src: "/images/b5n.png", alt: "dell" },
-    { src: "/images/b7.png", alt: "" },
-    { src: "/images/b8.png", alt: "" },
-    { src: "/images/acer.png", alt: "" },
+    { src: "/images/b7.png", alt: "nokia" },
+    { src: "/images/b8.png", alt: "samsung" },
+    { src: "/images/acer.png", alt: "acer" },
   ];
 
   return (
@@ -24,13 +24,10 @@ const SingleRowBrands = () => {
           </h3>
         </div>
 
-        {/* Marquee Container */}
         <div className="flex-1 relative overflow-hidden">
-          {/* Fading effect on both sides */}
           <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-100/25 to-transparent z-10"></div>
           <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-100/25 to-transparent z-10"></div>
 
-          {/* Marquee */}
           <Marquee speed={40} gradient={false} pauseOnHover>
             <div className="flex items-center space-x-12 px-2">
               {brands.map((brand, index) => (
@@ -49,4 +46,4 @@ const SingleRowBrands = () => {
   );
 };
 
-export default SingleRowBrands;
+export default BrandSlider;
