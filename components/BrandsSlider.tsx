@@ -1,48 +1,52 @@
-"use client";
-
 import React from "react";
+import Marquee from "react-fast-marquee";
 
-const BrandSlider: React.FC = () => {
-  const brands = ["/icons/b1.png", "/icons/b2.png"];
+const SingleRowBrands = () => {
+  const brands = [
+    { src: "/images/b1.png", alt: "microsoft" },
+    { src: "/images/b2.png", alt: "Asus" },
+    { src: "/images/b3.png", alt: "hp" },
+    { src: "/images/b6.png", alt: "sony" },
+    { src: "/images/b4.png", alt: "apple" },
+    { src: "/images/b5n.png", alt: "dell" },
+    { src: "/images/b7.png", alt: "" },
+    { src: "/images/b8.png", alt: "" },
+    { src: "/images/acer.png", alt: "" },
+  ];
 
   return (
-    <div className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
-          Trusted by Top Brands
-        </h2>
-        <div className="overflow-hidden relative">
-          <div className="flex items-center gap-8 animate-slide">
-            {/* Duplicate the array to create a seamless loop */}
-            {[...brands, ...brands].map((brand, index) => (
-              <div key={index} className="flex-shrink-0">
+    <div className="py-16">
+      <div className="flex items-center justify-between gap-8 mx-auto container px-4">
+        {/* Title */}
+        <div className="w-5/12">
+          <h3 className="text-lg w-full">
+            WE ARE PARTNERED WITH MORE THAN 50+ COMPANIES AROUND THE GLOBE.
+          </h3>
+        </div>
+
+        {/* Marquee Container */}
+        <div className="flex-1 relative overflow-hidden">
+          {/* Fading effect on both sides */}
+          <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-100/25 to-transparent z-10"></div>
+          <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-100/25 to-transparent z-10"></div>
+
+          {/* Marquee */}
+          <Marquee speed={40} gradient={false} pauseOnHover>
+            <div className="flex items-center space-x-12 px-2">
+              {brands.map((brand, index) => (
                 <img
-                  src={brand}
-                  alt={`Brand ${index + 1}`}
-                  className="h-12 md:h-12 w-auto"
+                  key={index}
+                  src={brand.src}
+                  alt={brand.alt}
+                  className="h-16"
                 />
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Marquee>
         </div>
       </div>
-      <style jsx>{`
-        .animate-slide {
-          display: flex;
-          animation: slide 20s linear infinite;
-        }
-
-        @keyframes slide {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </div>
   );
 };
 
-export default BrandSlider;
+export default SingleRowBrands;

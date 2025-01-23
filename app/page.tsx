@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <BrandSlider />
       <ServicesSection />
       {/* <WhyChooseUs /> */}
       <StepsSection />

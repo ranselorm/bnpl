@@ -5,6 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 import ClippedImages from "./ClippedImages";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
+import BrandSlider from "./BrandsSlider";
 
 const Hero = () => {
   return (
@@ -48,6 +49,7 @@ const Hero = () => {
             />
           </div>
         </div>
+        {/* <BrandSlider /> */}
         <ClippedImages />
       </main>
     </section>
