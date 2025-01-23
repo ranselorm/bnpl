@@ -3,53 +3,49 @@ import Link from "next/link";
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import ClippedImages from "./ClippedImages";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="py-12">
+    <section className="py-12 bg-light">
       <main className="container mx-auto px-4">
-        <div>
-          <h1 className="text-3xl md:text-[60px] font-bold md:leading-none">
-            A better way to finance your <br className="md:flex hidden" />
-            next
-            <span className="ml-4 text-primary">
-              <Typewriter
-                words={[
-                  "asset",
-                  "mobile phone",
-                  "laptop",
-                  "sewing machine",
-                  "soundbar",
-                ]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={50}
-                delaySpeed={1000}
-                cursorColor="black"
+        <div className="flex  md:items-start items-center  flex-col md:flex-row">
+          <div className="flex-1 md:w-3/6">
+            <div className="bg-pink w-max pl-1 py-1 pr-2 rounded-full flex items-center text-primary group">
+              <span className="bg-white px-4 py-2 rounded-full text-sm mr-3">
+                New
+              </span>
+              Better now availabe
+              <Icon
+                icon="lsicon:arrow-right-outline"
+                className="ml-2 translate-x-0 group-hover:translate-x-2 transition duration-300"
               />
-            </span>
-            .
-          </h1>
-          <p className="my-6 md:leading-loose md:text-xl">
-            Optimize funding for your upcoming needs
-            <br className="md:flex hidden" /> Welcome to a shopping experience
-            like never before With Cyrus Consumer Finance App
-          </p>
-          <div className="flex items-center gap-4">
+            </div>
+            <h1 className="text-3xl md:text-[55px] font-semibold md:leading-normal">
+              Empower Your Finances For A
+              <span className="ml-4 text-primary">Brighter Future.</span>
+            </h1>
+            <p className="my-6 md:leading-loose md:text-xl">
+              Optimize funding for your upcoming needs
+              <br className="md:flex hidden" /> Welcome to a shopping experience
+              like never before With Cyrus Consumer Finance App
+            </p>
             <Link
               href="/get-the-app"
-              className="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
+              className="bg-dark w-max flex items-center text-white px-3 py-2 rounded-full hover:bg-primary transition gap-3"
             >
-              Get App
+              <Icon icon="ic:baseline-apple" className="text-3xl" />
+              Download App
             </Link>
-            <Link
-              href="/get-the-app"
-              className="bg-transparent border-primary border text-dark px-6 py-3 rounded-full hover:bg-dark hover:text-white hover:border-dark transition"
-            >
-              Shop Now
-            </Link>
+          </div>
+          <div className="relative flex md:w-2/6 justify-center items-center">
+            <div className="bg-primary absolute w-64 h-64 md:w-96 md:h-96 rounded-full z-0"></div>
+            <img
+              src="/images/preview.png"
+              alt="Phone Preview"
+              className="relative w-[180] md:w-[300px] h-auto z-10 object-contain"
+            />
           </div>
         </div>
         <ClippedImages />

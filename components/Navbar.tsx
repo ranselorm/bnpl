@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -119,9 +120,10 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Link
               href="/get-the-app"
-              className="bg-primary text-white px-6 py-3 rounded-full hover:bg-blue-700 transition"
+              className="bg-dark w-max flex items-center text-white px-3 py-2 rounded-full hover:bg-primary transition gap-3"
             >
-              Get App
+              <Icon icon="ic:baseline-apple" className="text-3xl" />
+              Download App
             </Link>
           </div>
         </div>
