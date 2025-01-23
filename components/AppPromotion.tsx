@@ -9,13 +9,15 @@ const AppPromotion: React.FC = () => {
         {/* Text Content */}
         <div>
           <h2
-            className="text-4xl md:text-6xl font-bold text-dark mb-4"
+            className="text-3xl md:text-6xl font-bold text-dark mb-4"
             style={{ lineHeight: 1.2 }}
           >
             Easy-peasy financing at your fingertips.
           </h2>
-          <p className="text-dark mb-6 text-2xl">Get the app today.</p>
-          <div className="flex space-x-4">
+          <p className="text-dark mb-6 text-lg md:text-2xl">
+            Get the app today.
+          </p>
+          <div className="flex justify-center md:justify-start space-x-4">
             <a
               href="#"
               className="inline-block"
@@ -24,7 +26,7 @@ const AppPromotion: React.FC = () => {
               <img
                 src="/icons/appstore.png"
                 alt="Download on the App Store"
-                className="h-12 w-6xl"
+                className="h-12 md:w-6xl"
               />
             </a>
             <a
@@ -41,15 +43,12 @@ const AppPromotion: React.FC = () => {
           </div>
         </div>
 
-        {/* Image Section */}
         <div className="relative flex justify-center items-center">
-          {/* Circular Background */}
-          <div className="bg-primary absolute w-96 h-96 rounded-full z-0"></div>
-          {/* Phone Image */}
+          <div className="bg-primary absolute w-64 h-64 md:w-96 md:h-96 rounded-full z-0"></div>
           <img
             src="/images/preview.png"
             alt="Phone Preview"
-            className="relative w-[280px] h-auto z-10 object-contain"
+            className="relative w-[180] md:w-[280px] h-auto z-10 object-contain"
           />
         </div>
       </div>

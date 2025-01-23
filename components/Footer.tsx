@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <p className="text-2xl text-gray-800 font-medium mb-7">
             Empowering your financial journey, one transaction at a time.
           </p>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 md:justify-start justify-center">
             <a
               href="#"
               className="inline-block"

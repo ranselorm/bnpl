@@ -74,10 +74,9 @@ const Navbar = () => {
               <img
                 src="/images/logo.webp"
                 alt="Motito Logo"
-                width={40}
-                height={40}
+                width={100}
+                height={100}
               />
-              <span className="ml-2 text-2xl font-bold">motito</span>
             </div>
 
             <button

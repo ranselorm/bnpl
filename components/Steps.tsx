@@ -47,7 +47,7 @@ const StepsSection = () => {
         {/* Steps */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-28">
+          <div className="space-y-24">
             {steps.map((step, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="bg-primary text-white rounded-full w-10 h-10 p-4 flex items-center justify-center text-lg font-bold">
