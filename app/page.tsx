@@ -1,4 +1,5 @@
 import AppPromotion from "@/components/AppPromotion";
+import BrandSlider from "@/components/BrandsSlider";
 import FAQAccordion from "@/components/FaqAccordion";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/Services";
@@ -16,6 +17,7 @@ export default function Home() {
       <TopStores />
       <AppPromotion />
       <FAQAccordion />
+      {/* <BrandSlider /> */}
     </div>
   );
 }
