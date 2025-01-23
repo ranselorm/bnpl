@@ -1,4 +1,5 @@
 import AppPromotion from "@/components/AppPromotion";
+import FAQAccordion from "@/components/FaqAccordion";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/Services";
 import StepsSection from "@/components/Steps";
@@ -14,6 +15,7 @@ export default function Home() {
       <StepsSection />
       <TopStores />
       <AppPromotion />
+      <FAQAccordion />
     </div>
   );
 }

@@ -4,8 +4,8 @@ import React from "react";
 
 const AppPromotion: React.FC = () => {
   return (
-    <section className="bg-purple-200 py-16">
-      <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <section className="bg-primary/20 py-16">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         {/* Text Content */}
         <div>
           <h2
