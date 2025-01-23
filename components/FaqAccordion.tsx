@@ -41,22 +41,22 @@ const FAQSection: React.FC = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="container mx-auto flex flex-col md:flex-row gap-16 px-4 min-h-[600px]">
+      <div className="container mx-auto flex flex-col md:flex-row gap-12 px-4">
         {/* Left Section */}
-        <div className="w-full md:w-[40%] sticky top-16 self-start">
-          <h2 className="text-3xl font-bold leading-tight text-gray-900">
+        <div className="md:w-[40%]">
+          <h2 className="text-4xl font-bold leading-tight text-gray-900">
             Answers to Your <span className="text-primary">Questions</span>
           </h2>
           <p className="mt-4 text-gray-700 text-lg">
             Get answers to commonly asked questions about CCF and its features.
           </p>
-          <button className="mt-6 px-6 py-3 bg-black rounded-full text-white font-semibold hover:bg-gray-800">
+          <button className="mt-6 px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800">
             Contact Us
           </button>
         </div>
 
         {/* Right Section - Accordion */}
-        <div className="md:w-2/3 overflow-hidden">
+        <div className="flex-1 md:w-2/3">
           {faqs.map((faq, index) => {
             const isActive = activeIndex === index;
             return (
@@ -71,7 +71,7 @@ const FAQSection: React.FC = () => {
                   onClick={() => toggleAccordion(index)}
                 >
                   <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full text-primary">
-                    {isActive ? <X size={13} /> : <Plus size={13} />}
+                    {isActive ? <X size={16} /> : <Plus size={16} />}
                   </div>
                   <span className="text-lg font-medium text-gray-800">
                     {faq.question}
@@ -85,7 +85,7 @@ const FAQSection: React.FC = () => {
                     maxHeight: isActive ? "1000px" : "0",
                   }}
                 >
-                  <div className="px-14 text-gray-600">{faq.answer}</div>
+                  <div className="px-14 pb-3 text-gray-600">{faq.answer}</div>
                 </div>
               </div>
             );
