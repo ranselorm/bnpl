@@ -14,13 +14,11 @@ export default function Home() {
       <BrandSlider />
       <Discover />
       {/* <WhyChooseUs /> */}
-      {/* <StepsSection /> */}
       <StepsSection />
       <FeaturesSection />
       <TopStores />
       <AppPromotion />
       <FAQAccordion />
-      {/* <BrandSlider /> */}
     </div>
   );
 }

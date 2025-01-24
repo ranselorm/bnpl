@@ -50,7 +50,6 @@ const Hero = () => {
               like never before With Cyrus Consumer Finance App
             </motion.p>
             <motion.div variants={sectionVariants}>
-              {/* <button> */}
               <a
                 href="https://www.apple.com/app-store/"
                 className="bg-dark w-max flex items-center text-white px-3 py-2 rounded-full hover:bg-primary transition gap-3 mb-10 md:mb-0"
@@ -59,7 +58,6 @@ const Hero = () => {
                 <Icon icon="ic:baseline-apple" className="text-3xl" />
                 Download App
               </a>
-              {/* </button> */}
             </motion.div>
           </div>
 

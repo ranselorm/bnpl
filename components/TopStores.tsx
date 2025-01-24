@@ -56,10 +56,9 @@ const TopStores: React.FC = () => {
       className="py-16 bg-white"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }} // Trigger animation when 20% of the section is visible
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-6 md:px-12">
-        {/* Section Title and Description */}
         <motion.div className="text-center mb-12" variants={sectionVariants}>
           <h2 className="text-3xl md:text-5xl font-bold text-primary">
             Top stores we <span className="text-black">work with.</span>
