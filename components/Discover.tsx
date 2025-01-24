@@ -61,7 +61,6 @@ const Discover: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Image */}
                     <div className="flex-1 flex justify-center">
                       <Image
                         src={item.imageSrc}

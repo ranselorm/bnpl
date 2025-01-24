@@ -23,9 +23,9 @@ const Hero = () => {
                 className="ml-2 translate-x-0 group-hover:translate-x-2 transition duration-300"
               />
             </div>
-            <h1 className="text-3xl md:text-[55px] font-semibold md:leading-normal">
-              Empower Your Finances For A
-              <span className="ml-4 text-primary">Brighter Future.</span>
+            <h1 className="text-3xl md:text-[55px] font-semibold md:leading-normal max-w-3xl w-full text-primary">
+              Empower Your <span className="text-black">Finances</span> For A
+              Brighter Future.
             </h1>
             <p className="my-6 md:leading-loose md:text-xl">
               Optimize funding for your upcoming needs
@@ -33,7 +33,7 @@ const Hero = () => {
               like never before With Cyrus Consumer Finance App
             </p>
             <Link
-              href="/get-the-app"
+              href="https://www.apple.com/app-store/"
               className="bg-dark w-max flex items-center text-white px-3 py-2 rounded-full hover:bg-primary transition gap-3"
             >
               <Icon icon="ic:baseline-apple" className="text-3xl" />

@@ -11,7 +11,7 @@ const FeatureCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="bg-white overflow-hidden shadow-lg rounded-xl flex flex-col items-center text-center border border-gray-300">
+  <div className="bg-white overflow-hidden shadow-lg rounded-xl flex flex-col items-center text-center border border-gray-300 hover:scale-105 transform transition-all duration-300">
     <div
       className="bg-red-300 w-full flex items-center justify-center p-6"
       style={{
@@ -75,7 +75,7 @@ const FeaturesSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             The <span className="text-primary">CCF</span> Difference
           </h2>
-          <p className="text-gray-600 text-xl text-center">
+          <p className="text-dark text-lg text-center">
             With Cyrus Consumer Finance, you can shop with the freedom you
             deserve and pay with unmatched flexibility.
           </p>
