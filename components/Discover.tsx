@@ -40,7 +40,7 @@ const Discover: React.FC = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-primary">
             Discover What We <span className="text-black">Offer</span>
           </h2>
-          <p className="text-gray-600 mt-4 md:max-w-xl mx-auto w-full">
+          <p className="text-dark text-lg mt-4 md:max-w-xl mx-auto w-full">
             Elevate your e-commerce experience with our powerful feature set
             designed for unparalleled excellence.
           </p>
