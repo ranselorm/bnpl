@@ -7,6 +7,8 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: ["opacity-0", "opacity-100"],
+
   theme: {
     extend: {
       colors: {

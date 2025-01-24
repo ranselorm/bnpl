@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const StepsSection = () => {
   const steps = [
@@ -24,16 +25,14 @@ const StepsSection = () => {
     },
   ];
 
+  const sharedVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+  };
+
   return (
-    <section
-      className="bg-cover bg-center py-16 bg-no-repeat text-white rounded-t-[50px]"
-      // style={{
-      //   backgroundImage: "url('/images/pattern-bg.png')",
-      //   backgroundPosition: "50%",
-      // }}
-    >
+    <section className="bg-cover bg-center py-16 bg-no-repeat text-white rounded-t-[50px]">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-3xl text-black md:text-5xl font-bold mb-4">
             Get Started
@@ -44,10 +43,13 @@ const StepsSection = () => {
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-24">
+        <motion.div
+          className="grid md:grid-cols-2 gap-12 items-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div className="space-y-24" variants={sharedVariants}>
             {steps.map((step, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="bg-primary text-white rounded-full w-10 h-10 p-4 flex items-center justify-center text-lg font-bold">
@@ -62,22 +64,21 @@ const StepsSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
-          {/* Right Image */}
-
-          <div className="">
-            <div className="bg-primary rounded-xl p-6 shadow-lg h-[600px]">
-              <img
-                src="https://images.pexels.com/photos/2701660/pexels-photo-2701660.jpeg?auto=compress&cs=tinysrgb"
-                alt=""
-                width={300}
-                height={300}
-                className="w-full object-cover rounded-lg h-full"
-              />
-            </div>
-          </div>
-        </div>
+          <motion.div
+            className="bg-primary rounded-xl p-6 shadow-lg h-[600px]"
+            variants={sharedVariants}
+          >
+            <img
+              src="/images/step.jpg"
+              alt="Get Started"
+              width={300}
+              height={300}
+              className="w-full object-cover rounded-lg h-full"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

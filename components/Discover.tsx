@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Discover: React.FC = () => {
   const items = [
@@ -32,8 +33,17 @@ const Discover: React.FC = () => {
     },
   ];
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16">
       <div className="container mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -46,35 +56,42 @@ const Discover: React.FC = () => {
           </p>
         </div>
 
-        {/* Carousel */}
         <Carousel>
           <CarouselContent className="space-x-6">
             {items.map((item, index) => (
               <CarouselItem key={index} className="w-full flex-shrink-0">
-                <Card className="h-auto overflow-hidden rounded-3xl p-6 bg-primary/30 group">
-                  <div className="flex flex-col md:flex-row items-center md:items-start">
-                    {/* Text Content */}
-                    <div className="flex-1 text-left">
-                      <h3 className="text-3xl font-bold">{item.title}</h3>
-                      <p className="text-gray-700 my-4 text-lg">
-                        {item.description}
-                      </p>
+                <motion.div
+                  className="h-auto overflow-hidden rounded-3xl p-6 bg-primary/30 group" // Wrapper has a light blue bg
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  <Card className="bg-transparent border-none shadow-none">
+                    <div className="flex flex-col md:flex-row items-center md:items-start">
+                      <div className="flex-1 text-left">
+                        <h3 className="text-3xl font-bold">{item.title}</h3>
+                        <p className="text-gray-700 my-4 text-lg">
+                          {item.description}
+                        </p>
+                      </div>
+                      {/* Image Content */}
+                      <div className="flex-1 flex justify-center">
+                        <Image
+                          src={item.imageSrc}
+                          alt={item.title}
+                          width={450}
+                          height={450}
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
-
-                    <div className="flex-1 flex justify-center">
-                      <Image
-                        src={item.imageSrc}
-                        alt={item.title}
-                        width={450}
-                        height={450}
-                        className="object-contain"
-                      />
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
+                </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>
+
           {/* Controls */}
           <div className="flex justify-between items-center mt-4">
             <CarouselPrevious />
