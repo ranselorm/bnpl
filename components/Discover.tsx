@@ -26,7 +26,7 @@ const Discover: React.FC = () => {
       imageSrc: "/images/discovery2.svg",
     },
     {
-      title: "KeepMyPrice: 30-days layaway",
+      title: "KeepMyPrice: 30-days Layaway",
       description:
         "Protect yourself from inflation. Lock in price of item with a deposit for 30 days and self-finance your purchase. With CCF's Keep My Price, inflation fears are a thing of the past. Start saving towards your dream asset by locking price of item for 30 days.",
       imageSrc: "/images/discovery3.svg",
@@ -60,7 +60,7 @@ const Discover: React.FC = () => {
             {items.map((item, index) => (
               <CarouselItem key={index} className="w-full flex-shrink-0">
                 <motion.div
-                  className="h-auto overflow-hidden rounded-3xl p-6 bg-primary/30 group" // Wrapper has a light blue bg
+                  className="h-auto overflow-hidden rounded-3xl p-6 bg-primary/30 group"
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
@@ -69,7 +69,9 @@ const Discover: React.FC = () => {
                   <Card className="bg-transparent border-none shadow-none">
                     <div className="flex flex-col md:flex-row items-center md:items-start">
                       <div className="flex-1 text-left">
-                        <h3 className="text-3xl font-bold">{item.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold">
+                          {item.title}
+                        </h3>
                         <p className="text-gray-700 my-4 text-lg">
                           {item.description}
                         </p>

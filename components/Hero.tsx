@@ -22,10 +22,10 @@ const Hero = () => {
         <div className="flex md:items-start items-center flex-col md:flex-row">
           <div className="flex-1 md:w-3/6">
             <motion.div
-              className="bg-pink w-max pl-1 py-1 pr-2 rounded-full flex items-center text-primary group"
+              className="bg-pink w-max pl-1 md:py-1 py-[1px] pr-2 rounded-full flex items-center text-primary group md:text-sm text-xs mb-4 md:mb-0"
               variants={sectionVariants}
             >
-              <span className="bg-white px-4 py-2 rounded-full text-sm mr-3">
+              <span className="bg-white px-4 py-2 md:py-2 rounded-full mr-3">
                 New
               </span>
               Better now availabe
@@ -35,14 +35,14 @@ const Hero = () => {
               />
             </motion.div>
             <motion.h1
-              className="text-3xl md:text-[55px] font-semibold md:leading-normal max-w-3xl w-full text-primary"
+              className="text-2xl md:text-[55px] font-semibold md:leading-normal md:max-w-3xl w-full text-primary"
               variants={sectionVariants}
             >
               Empower Your <span className="text-black">Finances</span> For A
               Brighter Future.
             </motion.h1>
             <motion.p
-              className="my-6 md:leading-loose md:text-xl"
+              className="my-6 md:leading-loose text-base md:text-xl"
               variants={sectionVariants}
             >
               Optimize funding for your upcoming needs

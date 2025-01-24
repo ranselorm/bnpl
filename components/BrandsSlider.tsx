@@ -16,10 +16,10 @@ const BrandSlider = () => {
 
   return (
     <div className="py-16">
-      <div className="flex items-center justify-between gap-8 mx-auto container px-4">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 mx-auto container px-4">
         {/* Title */}
-        <div className="w-5/12">
-          <h3 className="text-lg w-full">
+        <div className="md:w-5/12">
+          <h3 className="text-base md:text-lg w-full text-center">
             WE ARE PARTNERED WITH MORE THAN 50+ COMPANIES AROUND THE GLOBE.
           </h3>
         </div>

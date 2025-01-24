@@ -25,7 +25,7 @@ const FeatureCard = ({
     id="features"
   >
     <div
-      className="bg-red-300 w-full flex items-center justify-center p-6"
+      className="w-full flex items-center justify-center p-6"
       style={{
         backgroundImage: `url('/images/bg.png')`,
       }}
@@ -54,7 +54,7 @@ const FeatureCard = ({
       <h3 className="text-2xl font-bold text-primary mb-2 text-center">
         {title}
       </h3>
-      <p className="text-gray-600 text-lg mt-8">{description}</p>
+      <p className="text-gray-600 text-base md:text-lg mt-8">{description}</p>
     </div>
   </motion.div>
 );
@@ -118,7 +118,7 @@ const FeaturesSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             The <span className="text-primary">CCF</span> Difference
           </h2>
-          <p className="text-dark text-lg text-center">
+          <p className="text-dark text-base md:text-lg text-center">
             With Cyrus Consumer Finance, you can shop with the freedom you
             deserve and pay with unmatched flexibility.
           </p>

@@ -39,7 +39,7 @@ const StepsSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-primary">
             Get <span className="text-black">Started</span>
           </h2>
-          <p className="text-dark text-lg">
+          <p className="text-dark text-base md:text-lg">
             Three simple steps to unlock the power of CCF and revolutionize your
             shopping experience.
           </p>
