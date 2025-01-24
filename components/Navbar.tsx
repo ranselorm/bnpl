@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const sharedVariants = {
@@ -35,17 +36,33 @@ const Navbar = () => {
           animate="visible"
         >
           <li>
-            <Link href="/ways-to-pay" className="hover:text-primary transition">
+            <ScrollLink
+              activeClass="text-primary"
+              to="discover"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className="cursor-pointer"
+            >
               Features
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/company" className="hover:text-primary transition">
+            <ScrollLink
+              activeClass="text-primary"
+              to="steps"
+              spy={true}
+              smooth={true}
+              offset={-50}
+              duration={500}
+              className="cursor-pointer"
+            >
               How It Works
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link href="/company" className="hover:text-primary transition">
+            <Link href="#" className="hover:text-primary transition">
               Testimonials
             </Link>
           </li>

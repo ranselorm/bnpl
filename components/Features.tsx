@@ -22,6 +22,7 @@ const FeatureCard = ({
         transition: { duration: 1, ease: "easeOut" },
       },
     }}
+    id="features"
   >
     <div
       className="bg-red-300 w-full flex items-center justify-center p-6"

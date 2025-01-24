@@ -43,9 +43,8 @@ const Discover: React.FC = () => {
   };
 
   return (
-    <section className="py-16">
+    <section className="py-16" id="discover">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-primary">
             Discover What We <span className="text-black">Offer</span>
@@ -65,7 +64,7 @@ const Discover: React.FC = () => {
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: false, amount: 0.3 }}
                 >
                   <Card className="bg-transparent border-none shadow-none">
                     <div className="flex flex-col md:flex-row items-center md:items-start">
@@ -75,7 +74,6 @@ const Discover: React.FC = () => {
                           {item.description}
                         </p>
                       </div>
-                      {/* Image Content */}
                       <div className="flex-1 flex justify-center">
                         <Image
                           src={item.imageSrc}
