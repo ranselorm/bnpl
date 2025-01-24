@@ -6,7 +6,6 @@ const AppPromotion: React.FC = () => {
   return (
     <section className="bg-primary/20 py-16">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-        {/* Text Content */}
         <div>
           <h2
             className="text-3xl md:text-6xl font-bold text-dark mb-4"

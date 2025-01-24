@@ -26,11 +26,11 @@ const StepsSection = () => {
 
   return (
     <section
-      className="bg-cover bg-center py-16 bg-no-repeat text-white bg-primary/20 rounded-t-[50px]"
-      style={{
-        backgroundImage: "url('/images/pattern-bg.png')",
-        backgroundPosition: "50%",
-      }}
+      className="bg-cover bg-center py-16 bg-no-repeat text-white rounded-t-[50px]"
+      // style={{
+      //   backgroundImage: "url('/images/pattern-bg.png')",
+      //   backgroundPosition: "50%",
+      // }}
     >
       <div className="container mx-auto px-6 md:px-12">
         {/* Section Header */}
@@ -67,7 +67,7 @@ const StepsSection = () => {
           {/* Right Image */}
 
           <div className="">
-            <div className="bg-white rounded-xl p-6 shadow-lg h-[600px]">
+            <div className="bg-primary rounded-xl p-6 shadow-lg h-[600px]">
               <img
                 src="https://images.pexels.com/photos/2701660/pexels-photo-2701660.jpeg?auto=compress&cs=tinysrgb"
                 alt=""

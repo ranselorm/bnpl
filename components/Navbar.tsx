@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Navbar = () => {
@@ -19,12 +18,10 @@ const Navbar = () => {
 
       <nav className="bg-white sticky top-0 z-50 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/">
             <img src="/images/logo.webp" alt="logo" width={120} height={40} />
           </Link>
 
-          {/* Menu Toggle (Mobile) */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -64,13 +61,11 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Navigation Links */}
           <div
             className={`fixed top-0 right-0 h-full bg-white z-40 transform transition-transform duration-300 ease-in-out ${
               isOpen ? "translate-x-0" : "translate-x-full"
             } md:static md:translate-x-0 md:flex md:items-center w-4/5 md:w-auto`}
           >
-            {/* Mobile Logo */}
             <div className="flex items-center text-blue-900 px-4 pt-4 md:hidden">
               <img
                 src="/images/logo.webp"
@@ -116,7 +111,6 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Link
               href="/get-the-app"
