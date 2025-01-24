@@ -1,11 +1,9 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 const Navbar = () => {
-  // Variants for the animation
   const sharedVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -18,7 +16,6 @@ const Navbar = () => {
   return (
     <nav className="bg-white sticky top-0 z-50 py-4">
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
-        {/* Logo */}
         <Link href="/">
           <motion.img
             src="/images/logo.webp"
@@ -31,10 +28,9 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Nav Links */}
         <motion.ul
           className="flex space-x-8 text-dark text-base font-medium"
-          variants={sharedVariants} // Apply same variants to the whole list
+          variants={sharedVariants}
           initial="hidden"
           animate="visible"
         >
@@ -55,7 +51,6 @@ const Navbar = () => {
           </li>
         </motion.ul>
 
-        {/* Desktop Download Button */}
         <motion.div
           className="hidden md:block"
           variants={sharedVariants}
