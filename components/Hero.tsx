@@ -7,7 +7,7 @@ import ClippedImages from "./ClippedImages";
 
 const Hero = () => {
   const sectionVariants = {
-    hidden: { opacity: 0, y: 20 }, // Start from below
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
   };
 
@@ -20,11 +20,10 @@ const Hero = () => {
     >
       <main className="container mx-auto px-4">
         <div className="flex md:items-start items-center flex-col md:flex-row">
-          {/* Left Content */}
           <div className="flex-1 md:w-3/6">
             <motion.div
               className="bg-pink w-max pl-1 py-1 pr-2 rounded-full flex items-center text-primary group"
-              variants={sectionVariants} // Animate this subcomponent
+              variants={sectionVariants}
             >
               <span className="bg-white px-4 py-2 rounded-full text-sm mr-3">
                 New
@@ -51,17 +50,19 @@ const Hero = () => {
               like never before With Cyrus Consumer Finance App
             </motion.p>
             <motion.div variants={sectionVariants}>
-              <Link
+              {/* <button> */}
+              <a
                 href="https://www.apple.com/app-store/"
-                className="bg-dark w-max flex items-center text-white px-3 py-2 rounded-full hover:bg-primary transition gap-3"
+                className="bg-dark w-max flex items-center text-white px-3 py-2 rounded-full hover:bg-primary transition gap-3 mb-10 md:mb-0"
+                target="blank"
               >
                 <Icon icon="ic:baseline-apple" className="text-3xl" />
                 Download App
-              </Link>
+              </a>
+              {/* </button> */}
             </motion.div>
           </div>
 
-          {/* Right Content */}
           <motion.div
             className="relative flex md:w-2/6 justify-center items-center"
             variants={sectionVariants}
@@ -74,7 +75,6 @@ const Hero = () => {
             />
           </motion.div>
         </div>
-        {/* Add clipped images */}
         <ClippedImages />
       </main>
     </motion.section>
