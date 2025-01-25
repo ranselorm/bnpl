@@ -33,10 +33,14 @@ const ContactForm = () => {
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.div
-        className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12"
+        className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12"
         variants={containerVariants}
       >
-        <motion.div className="relative" variants={itemVariants}>
+        {/* Image with Text Overlay */}
+        <motion.div
+          className="relative h-[500px] md:h-auto"
+          variants={itemVariants}
+        >
           <img
             src="/images/happy.png"
             alt="Contact Us"
@@ -65,6 +69,7 @@ const ContactForm = () => {
           </div>
         </motion.div>
 
+        {/* Form Section */}
         <motion.form className="space-y-6" variants={containerVariants}>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
@@ -75,7 +80,7 @@ const ContactForm = () => {
               <Input
                 id="firstName"
                 placeholder="Stephen"
-                className="mt-2"
+                className="mt-2 focus:ring-primary focus:ring-2 focus:outline-none"
                 required
               />
             </div>
@@ -84,7 +89,7 @@ const ContactForm = () => {
               <Input
                 id="lastName"
                 placeholder="Doh"
-                className="mt-2"
+                className="mt-2 focus:ring-primary focus:ring-2 focus:outline-none"
                 required
               />
             </div>
@@ -97,7 +102,7 @@ const ContactForm = () => {
               placeholder="stephdoh@example.com"
               type="email"
               required
-              className="mt-2"
+              className="mt-2 focus:ring-primary focus:ring-2 focus:outline-none"
             />
           </motion.div>
 
@@ -108,7 +113,7 @@ const ContactForm = () => {
               placeholder="+233 244 558 5250"
               type="tel"
               required
-              className="mt-2 focus:ring-primary focus:outline-none"
+              className="mt-2 focus:ring-primary focus:ring-2 focus:outline-none"
             />
           </motion.div>
 
@@ -118,14 +123,17 @@ const ContactForm = () => {
               id="message"
               placeholder="Write your message here..."
               rows={4}
-              className="mt-2 w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-primary 
+              className="mt-2 w-full border border-gray-300 rounded-md p-3 focus:ring-1 focus:ring-dark
               focus:outline-none"
               required
             ></textarea>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Button type="submit" className="w-full rounded-full">
+            <Button
+              type="submit"
+              className="w-full md:w-auto rounded-full hover:bg-primary"
+            >
               Send
               <Icon icon="formkit:arrowright" className="text-3xl" />
             </Button>
