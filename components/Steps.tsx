@@ -73,7 +73,7 @@ const StepsSection = () => {
             variants={sharedVariants}
           >
             <img
-              src="/images/step.jpg"
+              src="/images/happy.png"
               alt="Get Started"
               width={300}
               height={300}

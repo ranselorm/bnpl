@@ -8,7 +8,7 @@ const ClippedImages = () => {
       {/* Image 1 */}
       <div className="relative w-full h-72 rounded-2xl bg-blue-100 overflow-hidden">
         <Image
-          src="/images/mac.jpg"
+          src="/images/product1.webp"
           alt="Sofa"
           layout="fill"
           objectFit="cover"
@@ -48,8 +48,6 @@ const ClippedImages = () => {
           className="clip-circle"
         />
       </div>
-
-      {/* Add more items as needed */}
     </div>
   );
 };
