@@ -3,6 +3,7 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 const ContactForm = () => {
   return (
@@ -11,22 +12,30 @@ const ContactForm = () => {
         {/* Image with Text Overlay */}
         <div className="relative">
           <img
-            src="https://via.placeholder.com/400"
+            src="/images/happy.png"
             alt="Contact Us"
             className="w-full h-full object-cover rounded-xl"
           />
-          <div className="absolute inset-0 bg-black/50 rounded-xl flex flex-col justify-end p-6 text-white">
-            <div className="mb-4">
-              <div className="flex items-center gap-3">
-                <div className="bg-white text-black w-12 h-12 flex items-center justify-center rounded-full">
-                  <span className="text-lg font-bold">M</span>
-                </div>
-                <h3 className="text-xl font-semibold">Contact us</h3>
+          {/* Dark Overlay just for the text */}
+          <div className="absolute bottom-0 left-0 right-0 bg-black/50 rounded-b-xl p-6 text-white">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-white text-black w-12 h-12 flex items-center justify-center rounded-full">
+                <span className="text-lg font-bold">M</span>
               </div>
-              <p className="mt-4">
-                Ask about our platform, pricing, implementation, or anything
-                else. Our highly trained reps are standing by, ready to help.
-              </p>
+              <h3 className="text-xl font-semibold">Contact us</h3>
+            </div>
+            <p className="mb-4">
+              Ask about our financing plans or payment options. We're here to
+              help.
+            </p>
+            <div className="text-sm space-y-1">
+              <p>2nd Floor, Vertical Square</p>
+              <p>Community 6, Tema</p>
+              <p>Adjacent Hotel Joecarl</p>
+              <p>Tel: +233 20 933 4842</p>
+              <p>Email: cyrusheadoffice@gmail.com</p>
+              <p>Email: info@cyrusfinance.com</p>
+              <p>Website: www.cyrusfinance.com</p>
             </div>
           </div>
         </div>
@@ -36,19 +45,11 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <Label htmlFor="firstName">First Name</Label>
-              <Input
-                id="firstName"
-                placeholder="Enter your first name"
-                className="mt-2"
-              />
+              <Input id="firstName" placeholder="Stephen" className="mt-2" />
             </div>
             <div>
               <Label htmlFor="lastName">Last Name</Label>
-              <Input
-                id="lastName"
-                placeholder="Enter your last name"
-                className="mt-2"
-              />
+              <Input id="lastName" placeholder="Doh" className="mt-2" />
             </div>
           </div>
 
@@ -56,7 +57,7 @@ const ContactForm = () => {
             <Label htmlFor="email">E-mail Address *</Label>
             <Input
               id="email"
-              placeholder="Enter your email address"
+              placeholder="stephdoh@example.com"
               type="email"
               required
               className="mt-2"
@@ -67,10 +68,10 @@ const ContactForm = () => {
             <Label htmlFor="phone">Phone *</Label>
             <Input
               id="phone"
-              placeholder="+1 778 558 5250"
+              placeholder="+233 244 558 5250"
               type="tel"
               required
-              className="mt-2"
+              className="mt-2 focus:ring-primary focus:outline-none"
             />
           </div>
 
@@ -84,8 +85,9 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-          <Button type="submit" className="w-full md:w-auto">
-            Send Message
+          <Button type="submit" className="w-full md:w-auto rounded-full">
+            Send
+            <Icon icon="formkit:arrowright" className="text-3xl" />
           </Button>
         </form>
       </div>

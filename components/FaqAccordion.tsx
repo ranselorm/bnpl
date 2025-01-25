@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Plus, X } from "lucide-react";
+import Link from "next/link";
 
 const FAQSection: React.FC = () => {
   const faqs = [
@@ -71,9 +72,12 @@ const FAQSection: React.FC = () => {
           <p className="mt-4 text-gray-700 text-lg">
             Get answers to commonly asked questions about CCF and its features.
           </p>
-          <button className="mt-6 px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800">
+          <Link
+            href="/contact"
+            className="mt-6 inline-block px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-gray-800"
+          >
             Contact Us
-          </button>
+          </Link>
         </motion.div>
 
         <motion.div
