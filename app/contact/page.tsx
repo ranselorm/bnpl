@@ -36,14 +36,12 @@ const ContactForm = () => {
         className="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12"
         variants={containerVariants}
       >
-        {/* Image with Text Overlay */}
         <motion.div className="relative" variants={itemVariants}>
           <img
             src="/images/happy.png"
             alt="Contact Us"
             className="w-full h-full object-cover rounded-xl"
           />
-          {/* Dark Overlay just for the text */}
           <div className="absolute bottom-0 left-0 right-0 bg-black/50 rounded-b-xl p-6 text-white">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-white text-black w-12 h-12 flex items-center justify-center rounded-full">
@@ -67,19 +65,28 @@ const ContactForm = () => {
           </div>
         </motion.div>
 
-        {/* Form Section */}
         <motion.form className="space-y-6" variants={containerVariants}>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
             variants={itemVariants}
           >
             <div>
-              <Label htmlFor="firstName">First Name</Label>
-              <Input id="firstName" placeholder="Stephen" className="mt-2" />
+              <Label htmlFor="firstName">First Name *</Label>
+              <Input
+                id="firstName"
+                placeholder="Stephen"
+                className="mt-2"
+                required
+              />
             </div>
             <div>
-              <Label htmlFor="lastName">Last Name</Label>
-              <Input id="lastName" placeholder="Doh" className="mt-2" />
+              <Label htmlFor="lastName">Last Name *</Label>
+              <Input
+                id="lastName"
+                placeholder="Doh"
+                className="mt-2"
+                required
+              />
             </div>
           </motion.div>
 
@@ -106,17 +113,19 @@ const ContactForm = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">Message *</Label>
             <textarea
               id="message"
               placeholder="Write your message here..."
               rows={4}
-              className="mt-2 w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-primary focus:outline-none"
+              className="mt-2 w-full border border-gray-300 rounded-md p-3 focus:ring-2 focus:ring-primary 
+              focus:outline-none"
+              required
             ></textarea>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <Button type="submit" className="w-full md:w-auto rounded-full">
+            <Button type="submit" className="w-full rounded-full">
               Send
               <Icon icon="formkit:arrowright" className="text-3xl" />
             </Button>
