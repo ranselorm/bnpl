@@ -69,7 +69,7 @@ const Hero = () => {
             <img
               src="/images/preview.png"
               alt="Phone Preview"
-              className="relative w-[180] md:w-[300px] h-auto z-10 object-contain"
+              className="relative w-[100] md:w-[300px] h-auto z-10 object-contain"
             />
           </motion.div>
         </div>

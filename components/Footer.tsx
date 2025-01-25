@@ -30,9 +30,10 @@ const Footer: React.FC = () => {
               />
             </a>
             <a
-              href="#"
+              href="https://www.apple.com/app-store/"
               className="inline-block"
               aria-label="Get it on Google Play"
+              target="blank"
             >
               <img
                 src="/icons/google.png"

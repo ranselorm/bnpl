@@ -67,9 +67,10 @@ const AppPromotion: React.FC = () => {
             variants={buttonVariants}
           >
             <a
-              href="#"
+              href="https://www.apple.com/app-store/"
               className="inline-block"
               aria-label="Download on the App Store"
+              target="blank"
             >
               <img
                 src="/icons/appstore.png"
