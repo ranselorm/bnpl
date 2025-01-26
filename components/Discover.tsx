@@ -44,7 +44,7 @@ const Discover: React.FC = () => {
 
   return (
     <section className="py-16" id="discover">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-12 relative">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-primary">
             Discover What We <span className="text-black">Offer</span>
@@ -93,9 +93,9 @@ const Discover: React.FC = () => {
           </CarouselContent>
 
           {/* Controls */}
-          <div className="flex justify-between items-center mt-4">
-            <CarouselPrevious />
-            <CarouselNext />
+          <div className="flex justify-between items-center mt-4 relative">
+            <CarouselPrevious className="absolute left-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
+            <CarouselNext className="absolute right-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
           </div>
         </Carousel>
       </div>

@@ -58,7 +58,7 @@ const TopStores: React.FC = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 md:px-12 relative">
         <motion.div className="text-center mb-12" variants={sectionVariants}>
           <h2 className="text-3xl md:text-5xl font-bold text-primary">
             Top stores we <span className="text-black">work with.</span>
@@ -99,10 +99,11 @@ const TopStores: React.FC = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+
           {/* Carousel Controls */}
-          <div className="flex justify-between items-center mt-4">
-            <CarouselPrevious />
-            <CarouselNext />
+          <div className="flex justify-between items-center mt-4 relative">
+            <CarouselPrevious className="absolute left-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
+            <CarouselNext className="absolute right-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
           </div>
         </Carousel>
       </div>

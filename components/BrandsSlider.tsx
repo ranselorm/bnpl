@@ -58,13 +58,13 @@ const BrandSlider = () => {
           <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-100/25 to-transparent z-10"></div>
 
           <Marquee speed={40} gradient={false} pauseOnHover>
-            <div className="flex items-center space-x-8 px-4">
+            <div className="flex items-center space-x-6">
               {brands.map((brand, index) => (
                 <motion.img
                   key={index}
                   src={brand.src}
                   alt={brand.alt}
-                  className="h-16"
+                  className="h-10 md:h-16"
                   whileHover="hover"
                   variants={brandVariants}
                 />
