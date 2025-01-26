@@ -83,6 +83,11 @@ const Navbar = () => {
 
         <ul className="hidden md:flex space-x-8 text-dark text-base font-medium">
           <li>
+            <Link href="/about" className="hover:text-primary transition">
+              About
+            </Link>
+          </li>
+          <li>
             <ScrollLink
               activeClass="text-primary"
               to="discover"
@@ -108,11 +113,11 @@ const Navbar = () => {
               How It Works
             </ScrollLink>
           </li>
-          <li>
+          {/* <li>
             <Link href="#" className="hover:text-primary transition">
               Testimonials
             </Link>
-          </li>
+          </li> */}
         </ul>
 
         <div className="hidden md:block">

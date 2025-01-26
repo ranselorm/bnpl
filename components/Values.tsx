@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
 
-const WhyChooseUs = () => {
+const Values = () => {
   const features = [
     {
       icon: "mdi:circle-transparent",
@@ -57,12 +57,11 @@ const WhyChooseUs = () => {
         className="container mx-auto text-center space-y-8 px-6"
         variants={containerVariants}
       >
-        {/* Title Section */}
         <motion.div
           variants={cardVariants}
           className="text-center space-y-4 md:max-w-3xl w-full mx-auto"
         >
-          <h2 className="text-4xl uppercase text-primary">
+          <h2 className="text-xl md:text-4xl uppercase">
             It's all about <span className="text-dark">you</span>
           </h2>
           <p className="text-lg text-gray-600">
@@ -72,7 +71,6 @@ const WhyChooseUs = () => {
           </p>
         </motion.div>
 
-        {/* Features Cards */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -99,4 +97,4 @@ const WhyChooseUs = () => {
   );
 };
 
-export default WhyChooseUs;
+export default Values;
