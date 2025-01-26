@@ -26,7 +26,6 @@ const AboutHero = () => {
       }}
     >
       <div className="container mx-auto h-full flex items-center">
-        {/* Text Section */}
         <motion.div
           className="bg-white shadow-lg rounded-xl p-6 w-full md:w-6/12 md:h-80 h-auto flex flex-col justify-between"
           variants={containerVariants}
@@ -53,7 +52,6 @@ const AboutHero = () => {
             Learn more
           </ScrollLink>
         </motion.div>
-        {/* Image Section */}
       </div>
     </motion.section>
   );
