@@ -21,7 +21,7 @@ const OurStory = () => {
             variants={sharedVariants}
           >
             <img
-              src="/images/happy.png"
+              src="/images/build.jpg"
               alt="Get Started"
               width={500}
               height={500}
@@ -30,7 +30,7 @@ const OurStory = () => {
           </motion.div>
           <motion.div className="space-y-8" variants={sharedVariants}>
             <div className="flex items-start space-x-4">
-              <div className="text-dark">
+              <div className="text-dark text-center md:text-left">
                 <h2 className="text-xl md:text-3xl mb-5">WHO ARE WE?</h2>
                 <p className="text-base text-gray-700 font-medium leading-loose">
                   CCF is a leading provider of home appliance, office equipment

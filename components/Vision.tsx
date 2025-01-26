@@ -44,7 +44,7 @@ const Vision = () => {
           />
 
           <div className="absolute bottom-0 w-full mx-auto rounded-b-xl p-4 text-white">
-            <div className="bg-white text-black rounded-xl p-4 h-[250px]">
+            <div className="bg-white text-black rounded-xl p-4 md:h-[250px]">
               <div className="flex items-center gap-3 mb-4">
                 <h3 className="text-3xl font-medium">Vision</h3>
               </div>
@@ -63,7 +63,7 @@ const Vision = () => {
           />
 
           <div className="absolute bottom-0 w-full mx-auto rounded-b-xl p-4 text-white">
-            <div className="bg-white text-black rounded-xl p-4 h-[250px]">
+            <div className="bg-white text-black rounded-xl p-4 md:h-[250px]">
               <div className="flex items-center gap-3 mb-4">
                 <h3 className="text-3xl font-medium">Mission</h3>
               </div>
