@@ -62,8 +62,8 @@ const FAQSection: React.FC = () => {
         <motion.div
           className="md:w-[40%]"
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
           }}
         >
           <h2 className="text-4xl font-bold leading-tight text-gray-900">
@@ -83,7 +83,7 @@ const FAQSection: React.FC = () => {
         <motion.div
           className="flex-1 md:w-2/3"
           variants={{
-            hidden: { opacity: 0, x: 50 },
+            hidden: { opacity: 0, y: 50 },
             visible: {
               opacity: 1,
               x: 0,
