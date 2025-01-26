@@ -28,7 +28,11 @@ const OurStory = () => {
               className="w-full object-cover rounded-lg h-full"
             />
           </motion.div>
-          <motion.div className="space-y-8" variants={sharedVariants}>
+          <motion.div
+            className="space-y-8"
+            variants={sharedVariants}
+            id="our-story"
+          >
             <div className="flex items-start space-x-4">
               <div className="text-dark text-center md:text-left">
                 <h2 className="text-xl md:text-3xl mb-5">WHO ARE WE?</h2>

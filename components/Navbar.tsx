@@ -41,7 +41,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
         <Link href="/">
-          <img src="/images/logo.webp" alt="logo" width={120} height={40} />
+          <img src="/images/logo.webp" alt="logo" width={150} height={40} />
         </Link>
 
         <button
@@ -175,21 +175,40 @@ const Navbar = () => {
             <ul className="flex flex-col items-start space-y-6 text-lg font-medium w-full">
               <li>
                 <Link
-                  href="#features"
+                  href="/about"
                   className="hover:text-primary transition"
                   onClick={() => setIsOpen(false)}
                 >
-                  Features
+                  About
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#how-it-works"
-                  className="hover:text-primary transition"
+                <ScrollLink
+                  activeClass="text-primary"
+                  to="discover"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                  className="cursor-pointer"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Features
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink
+                  activeClass="text-primary"
+                  to="steps"
+                  spy={true}
+                  smooth={true}
+                  offset={-50}
+                  duration={500}
+                  className="cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   How It Works
-                </Link>
+                </ScrollLink>
               </li>
               <li>
                 <Link
@@ -198,6 +217,15 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-primary transition"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact
                 </Link>
               </li>
             </ul>

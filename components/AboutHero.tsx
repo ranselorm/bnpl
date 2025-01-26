@@ -25,7 +25,7 @@ const AboutHero = () => {
         backgroundImage: `url('/images/abouthero.jpg')`,
       }}
     >
-      <div className="container mx-auto h-full flex items-center">
+      <div className="container mx-auto h-full flex items-center px-4">
         <motion.div
           className="bg-white shadow-lg rounded-xl p-6 w-full md:w-6/12 md:h-80 h-auto flex flex-col justify-between"
           variants={containerVariants}
@@ -42,7 +42,7 @@ const AboutHero = () => {
           </p>
           <ScrollLink
             activeClass="text-primary"
-            to="#"
+            to="our-story"
             spy={true}
             smooth={true}
             offset={-50}

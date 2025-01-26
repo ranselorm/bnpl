@@ -50,6 +50,15 @@ const FAQSection: React.FC = () => {
     },
   };
 
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (index: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: index * 0.1 },
+    }),
+  };
+
   return (
     <motion.section
       className="py-16 bg-white"
@@ -84,21 +93,19 @@ const FAQSection: React.FC = () => {
           className="flex-1 md:w-2/3"
           variants={{
             hidden: { opacity: 0, y: 50 },
-            visible: {
-              opacity: 1,
-              x: 0,
-              transition: { duration: 0.6, delay: 0.2 },
-            },
+            visible: { opacity: 1, transition: { duration: 0.6, delay: 0.2 } },
           }}
         >
           {faqs.map((faq, index) => {
             const isActive = activeIndex === index;
             return (
-              <div
+              <motion.div
                 key={index}
-                className={`border border-gray-300 rounded-md mb-4 overflow-hidden transition-all duration-300 ${
+                className={`border border-gray-300 rounded-md mb-4 overflow-hidden ${
                   isActive ? "bg-gray-50 shadow" : ""
                 }`}
+                custom={index}
+                variants={itemVariants}
               >
                 <div
                   className="flex items-center gap-4 p-4 cursor-pointer"
@@ -106,21 +113,31 @@ const FAQSection: React.FC = () => {
                   role="button"
                   aria-expanded={isActive}
                 >
-                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full text-primary">
+                  <motion.div
+                    className="flex-shrink-0 w-6 h-6 flex items-center justify-center border border-gray-400 rounded-full text-primary"
+                    animate={{ rotate: isActive ? 45 : 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
                     {isActive ? <X size={16} /> : <Plus size={16} />}
-                  </div>
+                  </motion.div>
                   <span className="text-lg font-medium text-gray-800">
                     {faq.question}
                   </span>
                 </div>
-                <div
-                  className={`transition-all duration-500 ease-in-out ${
-                    isActive ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-                  }`}
+
+                {/* Answer */}
+                <motion.div
+                  className="px-6 pb-4 text-gray-600 overflow-hidden"
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: isActive ? "auto" : 0,
+                    opacity: isActive ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
-                  <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>
-                </div>
-              </div>
+                  {faq.answer}
+                </motion.div>
+              </motion.div>
             );
           })}
         </motion.div>
