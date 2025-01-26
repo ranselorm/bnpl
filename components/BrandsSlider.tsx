@@ -32,7 +32,7 @@ const BrandSlider = () => {
 
   return (
     <motion.div
-      className="py-16"
+      className="py-16 overflow-x-hidden" // Ensures no horizontal overflow
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -52,12 +52,13 @@ const BrandSlider = () => {
         </motion.div>
 
         {/* Marquee Slider */}
-        <div className="flex-1 relative overflow-hidden">
+        <div className="flex-1 relative">
+          {/* Gradient Overlay */}
           <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-100/25 to-transparent z-10"></div>
           <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-100/25 to-transparent z-10"></div>
 
           <Marquee speed={40} gradient={false} pauseOnHover>
-            <div className="flex items-center space-x-12 px-2">
+            <div className="flex items-center space-x-8 px-4">
               {brands.map((brand, index) => (
                 <motion.img
                   key={index}
