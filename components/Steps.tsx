@@ -14,14 +14,14 @@ const StepsSection = () => {
       title: "Create an account",
       description: "Sign up with your basic details to get started in minutes.",
     },
+    // {
+    //   step: "Step 3",
+    //   title: "Verify your income",
+    //   description:
+    //     "Verify your income using our quick income verification, bank statements, pay slip or employment letter to qualify for credit",
+    // },
     {
       step: "Step 3",
-      title: "Verify your income",
-      description:
-        "Verify your income using our quick income verification, bank statements, pay slip or employment letter to qualify for credit",
-    },
-    {
-      step: "Step 4",
       title: "Authenticate Identity",
       description:
         "Confirm your identity with a valid government-issued ID for secure and seamless access to credit",
@@ -56,7 +56,7 @@ const StepsSection = () => {
             Get <span className="text-black">Started</span>
           </h2>
           <p className="text-dark text-base md:text-lg">
-            Three simple steps to unlock the power of CCF and revolutionize your
+            Simple steps to unlock the power of CCF and revolutionize your
             shopping experience.
           </p>
         </div>
@@ -67,15 +67,15 @@ const StepsSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <motion.div className="space-y-8" variants={sharedVariants}>
+          <motion.div className="space-y-16" variants={sharedVariants}>
             {steps.map((step, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="bg-primary text-white rounded-full w-10 h-10 p-4 flex items-center justify-center text-lg font-bold">
                   {index + 1}
                 </div>
                 <div>
-                  <p className="text-sm text-dark font-medium">{step.step}</p>
-                  <h3 className="text-xl font-bold text-black">{step.title}</h3>
+                  {/* <p className="text-sm text-dark font-medium">{step.step}</p> */}
+                  <h3 className="text-lg font-bold text-black">{step.title}</h3>
                   <p className="text-dark">{step.description}</p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ const StepsSection = () => {
           </motion.div>
 
           <motion.div
-            className="bg-primary rounded-xl p-6 shadow-lg h-[700px]"
+            className="bg-primary rounded-xl p-6 shadow-lg h-[650px]"
             variants={sharedVariants}
           >
             <img
