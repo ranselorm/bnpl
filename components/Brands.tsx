@@ -21,9 +21,6 @@ const brands: Brand[] = [
   { src: "/images/acer.png", alt: "Acer" },
 ];
 
-/**
- * Standard Fisher–Yates shuffle.
- */
 function shuffleArray<T>(array: T[]): T[] {
   const arr = [...array];
   for (let i = arr.length - 1; i > 0; i--) {
@@ -33,10 +30,6 @@ function shuffleArray<T>(array: T[]): T[] {
   return arr;
 }
 
-/**
- * Returns a random derangement of the provided array—that is,
- * a permutation where no element remains in its original position.
- */
 function randomDerangement<T>(array: T[]): T[] {
   let deranged: T[];
   do {
@@ -45,10 +38,6 @@ function randomDerangement<T>(array: T[]): T[] {
   return deranged;
 }
 
-/**
- * A helper component to render a vertical column of brand icons.
- * A top margin (except for the first item) is applied so that duplicates match in height.
- */
 const BrandColumn: React.FC<{ brands: Brand[] }> = ({ brands }) => {
   return (
     <div className="flex flex-col">
@@ -107,8 +96,8 @@ const DesktopMarquee: React.FC = () => {
 
   return (
     <div className="relative flex gap-6 h-[400px] overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-teal-500 to-transparent z-10"></div>
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-teal-500 to-transparent z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-[#21d5ab] to-transparent z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#21d5ab] to-transparent z-10"></div>
 
       <div className="grid grid-cols-2 gap-6 w-full max-w-4xl">
         <motion.div
@@ -152,12 +141,15 @@ const MobileMarquee: React.FC = () => {
 
 const BrandSlider: React.FC = () => {
   return (
-    <div className="py-16 bg-teal-500 text-white">
+    <div className="py-16 bg-[#21d5ab] text-white">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
-        <div className="md:w-1/3 text-center md:text-left">
-          <h3 className="text-2xl font-semibold mb-4">
+        <div className="md:w-2/4 text-center md:text-left">
+          <h2
+            className="text-3xl md:text-5xl font-bold mb-5"
+            style={{ lineHeight: 1.4 }}
+          >
             Our Trusted Brands And Partners
-          </h3>
+          </h2>
           <p className="max-w-md text-lg">
             A vibrant montage of happy customers shopping in various stores and
             online, using their devices to make purchases.
