@@ -1,51 +1,63 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+// Create a motion version of Next.js Image.
+const MotionImage = motion(Image);
 
 const ClippedImages = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 py-8">
-      {/* Image 1 */}
-      <div className="relative w-full h-72 rounded-2xl bg-blue-100 overflow-hidden">
-        <Image
-          src="/images/product1.webp"
+      {/* Single image container */}
+      <div className="relative w-full h-72 rounded-2xl bg-[#d4d4d4] overflow-hidden">
+        <MotionImage
+          src="/images/tv.png"
           alt="Sofa"
-          layout="fill"
-          objectFit="cover"
+          fill
+          objectFit="contain"
           className="clip-circle"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
         />
       </div>
 
-      {/* Image 2 */}
+      {/* Two images side-by-side */}
       <div className="relative w-full flex gap-x-6 h-72 overflow-hidden">
-        <div className="relative w-1/2 h-full rounded-2xl overflow-hidden">
-          <Image
-            src="/images/phone.webp"
+        <div className="relative w-1/2 h-full rounded-2xl bg-[#d4d4d4] overflow-hidden">
+          <MotionImage
+            src="/images/bl.png"
             alt="phone"
-            layout="fill"
+            fill
             objectFit="cover"
             className="clip-circle"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
         </div>
-        <div className="relative w-1/2 h-full rounded-2xl overflow-hidden">
-          <Image
-            src="/images/sew.webp"
+        <div className="relative w-1/2 h-full rounded-2xl bg-[#d4d4d4] overflow-hidden">
+          <MotionImage
+            src="/images/fridge.png"
             alt="Sewing Machine"
-            layout="fill"
+            fill
             objectFit="cover"
             className="clip-circle"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
         </div>
       </div>
 
-      {/* Image 3 */}
-      <div className="relative w-full h-72 rounded-2xl bg-blue-100 overflow-hidden">
-        <Image
-          src="/images/head.webp"
+      {/* Single image container */}
+      <div className="relative w-full h-72 rounded-2xl bg-[#d4d4d4] overflow-hidden">
+        <MotionImage
+          src="/images/ph.png"
           alt="Sofa"
-          layout="fill"
-          objectFit="cover"
+          fill
+          objectFit="contain"
           className="clip-circle"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.3 }}
         />
       </div>
     </div>
