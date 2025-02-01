@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import ClippedImages from "./ClippedImages";
+// import ClippedImages from "./ClippedImages";
 
 const Hero = () => {
   const sectionVariants = {
@@ -72,7 +72,7 @@ const Hero = () => {
             />
           </motion.div>
         </div>
-        <ClippedImages />
+        {/* <ClippedImages /> */}
       </main>
     </motion.section>
   );
