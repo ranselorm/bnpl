@@ -6,6 +6,7 @@ import Discover from "@/components/Discover";
 import StepsSection from "@/components/Steps";
 import TopStores from "@/components/TopStores";
 import FeaturesSection from "@/components/Features";
+import Brands from "@/components/Brands";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <StepsSection />
       <FeaturesSection />
       <TopStores />
+      <Brands />
       <AppPromotion />
       <FAQAccordion />
     </div>
