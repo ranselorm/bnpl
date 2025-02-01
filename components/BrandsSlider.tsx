@@ -32,7 +32,7 @@ const BrandSlider = () => {
 
   return (
     <motion.div
-      className="py-16 overflow-x-hidden" // Ensures no horizontal overflow
+      className="py-16 overflow-x-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -51,9 +51,7 @@ const BrandSlider = () => {
           </h3>
         </motion.div>
 
-        {/* Marquee Slider */}
         <div className="flex-1 relative">
-          {/* Gradient Overlay */}
           <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-gray-100/25 to-transparent z-10"></div>
           <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-gray-100/25 to-transparent z-10"></div>
 

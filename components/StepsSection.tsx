@@ -46,9 +46,7 @@ const Steps = () => {
 
   return (
     <section className="relative min-h-screen">
-      {/* Main Container */}
       <div className="relative flex min-h-screen">
-        {/* Left Section */}
         <div
           className={`w-1/3 px-8 ${
             isSticky ? "sticky top-0" : ""
@@ -63,7 +61,6 @@ const Steps = () => {
           </p>
         </div>
 
-        {/* Right Section */}
         <div
           ref={containerRef}
           className="w-2/3 space-y-8 px-8"

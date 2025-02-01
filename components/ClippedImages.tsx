@@ -3,13 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-// Create a motion version of Next.js Image.
 const MotionImage = motion(Image);
 
 const ClippedImages = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 py-8">
-      {/* Single image container */}
       <div className="relative w-full h-72 rounded-2xl bg-[#d4d4d4] overflow-hidden">
         <MotionImage
           src="/images/tv.png"
@@ -22,7 +20,6 @@ const ClippedImages = () => {
         />
       </div>
 
-      {/* Two images side-by-side */}
       <div className="relative w-full flex gap-x-6 h-72 overflow-hidden">
         <div className="relative w-1/2 h-full rounded-2xl bg-[#d4d4d4] overflow-hidden">
           <MotionImage
@@ -48,7 +45,6 @@ const ClippedImages = () => {
         </div>
       </div>
 
-      {/* Single image container */}
       <div className="relative w-full h-72 rounded-2xl bg-[#d4d4d4] overflow-hidden">
         <MotionImage
           src="/images/ph.png"

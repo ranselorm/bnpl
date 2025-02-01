@@ -69,7 +69,6 @@ const TopStores: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Carousel */}
         <Carousel>
           <CarouselContent className="flex space-x-4">
             {stores.map((store, index) => (
@@ -79,7 +78,7 @@ const TopStores: React.FC = () => {
               >
                 <motion.div
                   className="h-[300px] overflow-hidden relative group"
-                  variants={cardVariants} // Animate each card
+                  variants={cardVariants}
                 >
                   <Card>
                     <div className="relative w-full h-[300px] overflow-hidden rounded-lg">
@@ -100,7 +99,6 @@ const TopStores: React.FC = () => {
             ))}
           </CarouselContent>
 
-          {/* Carousel Controls */}
           <div className="flex justify-between items-center mt-4 relative">
             <CarouselPrevious className="absolute left-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
             <CarouselNext className="absolute right-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />

@@ -14,7 +14,6 @@ export default function Home() {
       <Hero />
       <BrandSlider />
       <Discover />
-      {/* <WhyChooseUs /> */}
       <StepsSection />
       <FeaturesSection />
       <TopStores />

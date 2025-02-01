@@ -92,7 +92,6 @@ const Discover: React.FC = () => {
             ))}
           </CarouselContent>
 
-          {/* Controls */}
           <div className="flex justify-between items-center mt-4 relative">
             <CarouselPrevious className="absolute left-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
             <CarouselNext className="absolute right-0 transform -translate-y-1/2 top-1/2 bg-gray-200 rounded-full p-2 shadow-md hover:bg-gray-300" />
