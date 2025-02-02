@@ -5,17 +5,15 @@ import { motion } from "framer-motion";
 
 const MotionImage = motion(Image);
 
-// Variants for the container that will stagger its children.
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1, // Adjust this value for faster or slower staggering.
+      staggerChildren: 0.1,
     },
   },
 };
 
-// Variants for each child (image container).
 const childVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -32,9 +30,8 @@ const ClippedImages = () => {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }} // Change amount to 0.2 for 20% if desired.
+      viewport={{ once: true, amount: 0.3 }}
     >
-      {/* First Grid Cell */}
       <motion.div
         className="relative w-full h-72 rounded-2xl bg-[#d4d4d4] overflow-hidden"
         variants={childVariants}
@@ -50,7 +47,6 @@ const ClippedImages = () => {
         />
       </motion.div>
 
-      {/* Second Grid Cell (Flex container with two images) */}
       <motion.div
         className="relative w-full flex gap-x-6 h-72 overflow-hidden"
         variants={childVariants}
@@ -58,7 +54,7 @@ const ClippedImages = () => {
         <div className="relative w-1/2 h-full rounded-2xl bg-[#d4d4d4] overflow-hidden">
           <MotionImage
             src="/images/bl.png"
-            alt="phone"
+            alt="tv"
             fill
             objectFit="cover"
             className="clip-circle"
@@ -69,7 +65,7 @@ const ClippedImages = () => {
         <div className="relative w-1/2 h-full rounded-2xl bg-[#d4d4d4] overflow-hidden">
           <MotionImage
             src="/images/fridge.png"
-            alt="Sewing Machine"
+            alt="blender"
             fill
             objectFit="cover"
             className="clip-circle"
@@ -79,13 +75,12 @@ const ClippedImages = () => {
         </div>
       </motion.div>
 
-      {/* Third Grid Cell */}
       <motion.div
         className="relative w-full h-72 rounded-2xl bg-[#d4d4d4] overflow-hidden"
         variants={childVariants}
       >
         <MotionImage
-          src="/images/ph.png"
+          src="/images/xiao.png"
           alt="Sofa"
           fill
           objectFit="contain"
